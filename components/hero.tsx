@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/site-paths";
 
 export function Hero() {
   return (
     <section className="page-section relative isolate min-h-[580px] overflow-hidden sm:min-h-[620px] lg:min-h-[680px]">
       <div className="absolute inset-0">
         <Image
-          src="/images/d4v-hero-photo.png"
+          src={withBasePath("/images/d4v-hero-photo.png")}
           alt="Older adults reviewing an unknown caller on a smartphone together at a table."
           fill
           loading="eager"

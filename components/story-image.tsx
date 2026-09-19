@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { PagePhoto } from "@/lib/page-photos";
+import { withBasePath } from "@/lib/site-paths";
 
 export type StoryImageTreatment =
   | "full-bleed"
@@ -56,7 +57,7 @@ export function StoryImage({
     >
       <div className="story-image__media">
         <Image
-          src={photo.src}
+          src={withBasePath(photo.src)}
           alt={photo.alt}
           fill
           loading={eager ? "eager" : "lazy"}

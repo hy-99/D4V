@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { PagePhoto, PhotoFocalPoint } from "@/lib/page-photos";
+import { withBasePath } from "@/lib/site-paths";
 
 type PhotoFrameVariant = "arch" | "landscape" | "portrait" | "wide" | "inset";
 type PhotoFrameTone = "blue" | "peach" | "sage" | "cream" | "navy";
@@ -55,7 +56,7 @@ export function PhotoFrame({
     >
       <div className="photo-frame-media">
         <Image
-          src={photo.src}
+          src={withBasePath(photo.src)}
           alt={photo.alt}
           fill
           loading={eager ? "eager" : "lazy"}

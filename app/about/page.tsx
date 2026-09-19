@@ -8,6 +8,7 @@ import { OfficerCarousel } from "@/components/about/officer-carousel";
 import { ScamPhotoDeck } from "@/components/about/scam-photo-deck";
 import { EditorialSection } from "@/components/editorial-section";
 import { PageShell } from "@/components/page-shell";
+import { withBasePath } from "@/lib/site-paths";
 
 const revealDelay = (delay: string) =>
   ({ "--reveal-delay": delay }) as CSSProperties;
@@ -49,7 +50,7 @@ export default function AboutPage() {
           <div data-reveal-item style={revealDelay("100ms")} className="about-reference-hero__visual">
             <div className="about-reference-hero__photo" data-story-photo="hero">
               <Image
-                src="/images/inner-pages/about-hero-reference.png"
+                src={withBasePath("/images/inner-pages/about-hero-reference.png")}
                 alt="An older Asian couple smiling as they review a smartphone together."
                 fill
                 preload
@@ -124,7 +125,7 @@ export default function AboutPage() {
           >
             <div data-reveal-item style={revealDelay("80ms")} className="about-reference-invitation__art">
               <Image
-                src="/illustrations/about-students-cutout.png"
+                src={withBasePath("/illustrations/about-students-cutout.png")}
                 alt="Four high school students collaborating around a laptop."
                 fill
                 sizes="(min-width: 1024px) 48vw, (min-width: 768px) 92vw, 100vw"

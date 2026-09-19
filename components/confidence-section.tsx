@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { withBasePath } from "@/lib/site-paths";
 
 const revealDelay = (delay: string) =>
   ({ "--reveal-delay": delay }) as CSSProperties;
@@ -69,7 +70,7 @@ export function ConfidenceSection() {
             className="awareness-image relative aspect-[1.15] overflow-hidden border-2 border-[color:rgba(73,144,210,0.52)] bg-[var(--color-soft-cream)] shadow-[0_20px_50px_rgba(11,45,74,0.12)]"
           >
             <Image
-              src="/images/workshops-placeholder.png"
+              src={withBasePath("/images/workshops-placeholder.png")}
               alt="An educational online-safety presentation with older adults attending."
               fill
               loading="eager"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
+import { withBasePath } from "@/lib/site-paths";
 
 export function AboutFooter() {
   return (
@@ -10,7 +11,7 @@ export function AboutFooter() {
             <Link href="/" className="about-reference-footer__brand-link">
               <span className="about-reference-footer__logo">
                 <Image
-                  src="/images/d4v-logo-exact.png"
+                  src={withBasePath("/images/d4v-logo-exact.png")}
                   alt="D4V Bay Area logo"
                   fill
                   loading="eager"

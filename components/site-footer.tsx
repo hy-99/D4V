@@ -5,6 +5,7 @@ import type { CSSProperties } from "react";
 import { AboutFooter } from "@/components/about/about-footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { navigationItems } from "@/lib/navigation";
+import { withBasePath } from "@/lib/site-paths";
 
 const revealDelay = (delay: string) =>
   ({ "--reveal-delay": delay }) as CSSProperties;
@@ -38,7 +39,7 @@ export function SiteFooter({ tone = "light", variant = "default" }: SiteFooterPr
                 className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full"
               >
                 <Image
-                  src="/images/d4v-logo-exact.png"
+                  src={withBasePath("/images/d4v-logo-exact.png")}
                   alt="D4V Bay Area logo"
                   fill
                   loading="eager"

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { withBasePath } from "@/lib/site-paths";
 
 const revealDelay = (delay: string) =>
   ({ "--reveal-delay": delay }) as CSSProperties;
@@ -14,7 +15,7 @@ export function CallToAction() {
         className="relative isolate flex min-h-[22rem] overflow-hidden border-y border-white/10 bg-[var(--color-deep-navy)] sm:min-h-[19rem] lg:min-h-72"
       >
         <Image
-          src="/images/homepage-teamwork-hands.jpg"
+          src={withBasePath("/images/homepage-teamwork-hands.jpg")}
           alt=""
           fill
           sizes="100vw"

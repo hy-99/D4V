@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { MobileMenu } from "@/components/mobile-menu";
 import { navigationItems } from "@/lib/navigation";
+import { withBasePath } from "@/lib/site-paths";
 
 type HeaderProps = {
   activeHref?: string;
@@ -98,7 +99,7 @@ export function Header({ activeHref, tone = "hero" }: HeaderProps) {
               className="relative block h-[56px] w-[56px] overflow-hidden rounded-full md:h-[72px] md:w-[72px]"
             >
               <Image
-                src="/images/d4v-logo-exact.png"
+                src={withBasePath("/images/d4v-logo-exact.png")}
                 alt="D4V Bay Area logo"
                 fill
                 loading="eager"

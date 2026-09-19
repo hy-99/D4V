@@ -7,6 +7,7 @@ import {
   useState,
   type KeyboardEvent,
 } from "react";
+import { withBasePath } from "@/lib/site-paths";
 
 export type Officer = {
   name: string;
@@ -96,7 +97,7 @@ export function OfficerCarousel({ profiles = officers }: OfficerCarouselProps) {
               data-officer-direction={direction}
             >
               <Image
-                src={activeOfficer.imageSrc}
+                src={withBasePath(activeOfficer.imageSrc)}
                 alt={activeOfficer.imageAlt}
                 fill
                 sizes="(min-width: 1280px) 1240px, 94vw"

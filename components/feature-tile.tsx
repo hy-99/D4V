@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { FeatureTileData } from "@/lib/feature-tiles";
+import { withBasePath } from "@/lib/site-paths";
 
 type FeatureTileProps = {
   tile: FeatureTileData;
@@ -22,7 +23,7 @@ export function FeatureTile({ tile }: FeatureTileProps) {
       }
     >
       <Image
-        src={tile.imageSrc}
+        src={withBasePath(tile.imageSrc)}
         alt=""
         fill
         aria-hidden="true"

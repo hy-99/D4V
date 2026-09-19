@@ -9,6 +9,7 @@ import {
   useSyncExternalStore,
   type CSSProperties,
 } from "react";
+import { withBasePath } from "@/lib/site-paths";
 
 type ScamPhoto = {
   src: string;
@@ -134,7 +135,7 @@ export function ScamPhotoDeck() {
               >
                 <div className="scam-photo-deck__media">
                   <Image
-                    src={photo.src}
+                    src={withBasePath(photo.src)}
                     alt={photo.alt}
                     fill
                     loading={index === 0 ? "eager" : "lazy"}
